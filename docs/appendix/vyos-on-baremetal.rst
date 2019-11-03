@@ -30,7 +30,7 @@ the following optional parts will be required:
 
 Latest VyOS rolling releases boot without any problem on this board. You also
 receive a nice IPMI interface realized with an ASPEED AST2400 BMC (no information
-about [OpenBMC](https://www.openbmc.org/)) so far on this motherboard.
+about `OpenBMC <https://www.openbmc.org/>`_ so far on this motherboard).
 
 Pictures
 --------
@@ -94,10 +94,13 @@ Shopping Cart
 
 * 1x apu4c4 = 4 i211AT LAN / AMD GX-412TC CPU / 4 GB DRAM / dual SIM
 * 1x Kingston SUV500MS/120G
-* 1x VARIA Group Item 326745 10" dual rack rack for APU4
+* 1x VARIA Group Item 326745 19" dual rack rack for APU4
+* 1x Compex WLE900VX (Optional mini PCIe WiFi module)
 
-The 19" enclosure can accomodate two APU4 boards - there is a single and dual
-cover.
+The 19" enclosure can accomodate up to two APU4 boards - there is a single and
+dual front cover.
+
+.. note:: Compex WLE900VX is only supported in mPCIe slot 1.
 
 VyOS 1.2 (crux)
 ---------------
@@ -162,7 +165,7 @@ emulator to 9600 8N1 and after a while your console will show:
 You can now proceed with a regular image installation as described in
 :ref:`installation`.
 
-^As the APU board itself still used a serial setting of 115200 8N1 it is strongly
+As the APU board itself still used a serial setting of 115200 8N1 it is strongly
 recommended that you change the VyOS serial interface settings after your first
 successful boot.
 
@@ -365,13 +368,13 @@ Reboot into BIOS, Chipset > South Bridge > USB Configuration:
 Install VyOS:
 -------------
 
-Create a VyOS bootable USB key. I Used the 64bits iso (VyOS 1.1.7) and live USB
-installer (http://www.linuxliveusb.com/)
+Create a VyOS bootable USB key. I used the 64-bit ISO (VyOS 1.1.7) and `LinuxLive
+USB Creator <http://www.linuxliveusb.com/>`_.
 
 I'm not sure if it helps the process but I changed default option to live-serial
 (line “default xxxx”) on the USB key under syslinux/syslinux.cfg.
 
 I connected the key to one black USB port on the back and powered on. The first
-VyOS screen has some readability issues. Press enter to continue.
+VyOS screen has some readability issues. Press :kbd:`Enter` to continue.
 
 Then VyOS should boot and you can perform the ``install image``

@@ -14,7 +14,7 @@ Configuration
 
 The `Secure Socket Tunneling Protocol`_ (SSTP), provides ppp via a SSL/TLS channel.
 Using publically signed certificates as well a by private PKI, is fully supported.
-All certficates should be stored on VyOS under ``/config/user-data/sstp``.
+All certificates should be stored on VyOS under ``/config/user-data/sstp``.
 
 
 Self Signed CA and server certificates
@@ -62,6 +62,7 @@ Use <tab> to setup the ``set sstp-settings ssl-certs ...``, it automatically loo
 
 .. code-block:: sh
 
+  edit service sstp-server
   set authentication local-users username foo password 'bar'
   set authentication mode 'local'
   set network-settings client-ip-settings gateway-address '10.100.100.1'

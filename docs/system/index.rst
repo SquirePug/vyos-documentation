@@ -11,12 +11,14 @@ should be ready for further configuration which is described in this chapter.
    :maxdepth: 2
    :hidden:
 
+   config-management
    eventhandler
    flowaccounting
    host-information
+   login-users
+   ntp
+   proxy
    serialconsole
-   system-users
    syslog
    task-scheduler
-   config-management
    time-zone

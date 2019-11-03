@@ -10,8 +10,9 @@ we will be creating a bridge for VLAN 100 and assigning a VIF to the bridge.
 .. code-block:: sh
 
   set interfaces bridge 'br100'
-  set interfaces ethernet eth1 vif 100 bridge-group bridge br100
-
+  set interfaces ethernet eth1 vif 100 
+  set interfaces bridge br100 member interface eth1.100
+    
 Interfaces assigned to a bridge-group do not have address configuration. An IP
 address can be assigned to the bridge interface itself, however, like any
 normal interface.
@@ -33,9 +34,6 @@ Example Result:
   ethernet eth1 {
   [...]
       vif 100 {
-          bridge-group {
-              bridge br100
-          }
       }
   }
 
