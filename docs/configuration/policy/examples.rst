@@ -202,7 +202,7 @@ destined target host (in our example eth1).
 
 .. code-block:: none
 
-  set interfaces ethernet eth1 policy route NXT-MSS-CLAMP
+  set interfaces ethernet eth1 policy route IP-MSS-CLAMP
 
 You can view that the policy is being correctly (or incorrectly) utilised
 with the following command:
